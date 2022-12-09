@@ -10,6 +10,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await loadConfig();
   registerHTTPService();
+
   runApp(const MyApp());
 }
 
@@ -32,14 +33,17 @@ void registerHTTPService() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'CoinCap',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
         scaffoldBackgroundColor: const Color.fromRGBO(
           88,
           88,
