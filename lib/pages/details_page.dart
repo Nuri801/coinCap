@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 
+
 class DetailsPage extends StatelessWidget {
   final Map rates;
 
@@ -17,27 +18,25 @@ class DetailsPage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.all(50),
-          child: Center(
-            child: ListView.builder(
-              itemCount: _currencies.length,
-              itemBuilder: (_context, _index) {
-                String _currency = _currencies[_index].toString().toUpperCase();
-                String _rate = _exchangeRates[_index].toString();
-                return Padding(
-                  padding: const EdgeInsets.all(4),
-                  child: ListTile(
-                    title: Text(
-                      "$_currency : $_rate",
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+          child: ListView.builder(
+            itemCount: _currencies.length,
+            itemBuilder: (_context, _index) {
+              String _currency = _currencies[_index].toString().toUpperCase();
+              String _rate = _exchangeRates[_index].toString();
+              return Padding(
+                padding: const EdgeInsets.all(4),
+                child: ListTile(
+                  title: Text(
+                    "$_currency : $_rate",
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
         ),
       ),
