@@ -105,6 +105,7 @@ class _HomePageState extends State<HomePage> {
           String _coinDescription = _data["description"]["en"];
           Map exchangeRates = _data["market_data"]["current_price"];
 
+
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
